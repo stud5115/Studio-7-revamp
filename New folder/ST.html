@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 7 Dance Company</title>
+    <link rel="stylesheet" href="ST.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate-fade-in">Welcome to Studio 7 Dance Company</h1>
+            <p class="animate-slide-up">Unlock your potential and join us on the dance floor!</p>
+            <a href="#contact" class="cta-button animate-pulse">Join Now</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="animate-slide-left">About Us</h2>
+        <div class="about-content">
+            <p class="animate-fade-in">Welcome to Studio 7 Dance Company, where passion meets precision. We're more than just a dance studio; we're a community dedicated to nurturing creativity, fostering growth, and inspiring excellence through the art of dance.</p>
+            <p class="animate-fade-in">Our mission is to ignite the love for dance in every student, providing high-quality instruction in a supportive and creative environment. Whether you're a beginner or an advanced dancer, our classes are designed to challenge and inspire you.</p>
+            <p class="animate-fade-in">Join us and experience the joy of movement, the thrill of performance, and the camaraderie of our dance family. At Studio 7, every step is a journey, and every performance is a celebration.</p>
+        </div>
+    </section>
+
+    <section id="genres">
+        <h2 class="animate-slide-right">Dance Genres</h2>
+        <div class="genres-container">
+            <div class="genre-item animate-zoom">
+                <h3>Ballet</h3>
+                <p>Experience the grace and elegance of classical ballet. Our ballet classes focus on technique, strength, and flexibility.</p>
+            </div>
+            <div class="genre-item animate-zoom">
+                <h3>Hip Hop</h3>
+                <p>Express yourself with energy and rhythm in our hip hop classes. Learn the latest moves and improve your coordination and style.</p>
+            </div>
+            <div class="genre-item animate-zoom">
+                <h3>Contemporary</h3>
+                <p>Explore the freedom and creativity of contemporary dance. Our classes blend various dance styles to create unique and expressive movements.</p>
+            </div>
+        </div>
+        <div class="show-more-container">
+            <a href="genres.html" class="show-more-button">Show More</a>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="animate-slide-right">Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item animate-zoom" onclick="openModal();currentSlide(1)">
+                <img src="G1.jpeg" alt="Dance Image 1">
+            </div>
+            <div class="gallery-item animate-zoom" onclick="openModal();currentSlide(2)">
+                <img src="G2.jpeg" alt="Dance Image 2">
+            </div>
+            <div class="gallery-item animate-zoom" onclick="openModal();currentSlide(3)">
+                <img src="G3.jpeg" alt="Dance Image 3">
+            </div>
+        </div>
+        <div class="show-more-container">
+            <a href="gallery.html" class="show-more-button">Show More</a>
+        </div>
+
+        <div id="myModal" class="modal" style="display: none;">
+            <span class="close animate-fade-in" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides animate-fade-in">
+                    <img src="G1.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides animate-fade-in">
+                    <img src="G2.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides animate-fade-in">
+                    <img src="G3.jpeg" style="width:100%">
+                </div>
+                <a class="prev animate-fade-in" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next animate-fade-in" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2 class="animate-slide-left">Reviews</h2>
+        <div class="reviews-container">
+            <div class="review animate-fade-in">
+                <p>"Amazing classes and teachers! Highly recommend." - Jane D.</p>
+            </div>
+            <div class="review animate-fade-in">
+                <p>"Studio 7 has changed my life. I love dancing here!" - John S.</p>
+            </div>
+            <div class="review animate-fade-in">
+                <p>"The best dance studio in town! Great atmosphere and wonderful instructors." - Emily R.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers">
+        <h2 class="animate-slide-right">Meet the Teachers</h2>
+        <div class="teachers-container">
+            <div class="teacher-item animate-slide-up">
+                <img src="Wilma.jpg" alt="Teacher 1">
+                <p>Wilma Niekerk - Owner, Junior and Senior Choreographer</p>
+            </div>
+            <div class="teacher-item animate-slide-up">
+                <img src="Jane.jpg" alt="Teacher 2">
+                <p>Jané van Niekerk - Junior and Senior Choreographer</p>
+            </div>
+            <div class="teacher-item animate-slide-up">
+                <img src="Enja.jpg" alt="Teacher 2">
+                <p>Enja Pistorius - Ballet Teacher</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="animate-slide-left">Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a4f01638-9080-42a7-a3d4-a1bca1503bf4">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" required class="form-input">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" required class="form-input">
+                <label for="message" class="form-label">Message:</label>
+                <textarea id="message" name="message" required class="form-input"></textarea>
+                <button type="submit" class="submit-button">Send</button>
+            </form>
+            <div class="contact-animation"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section animate-slide-up">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about" class="animate-fade-in">About Us</a></li>
+                    <li><a href="#gallery" class="animate-fade-in">Gallery</a></li>
+                    <li><a href="#reviews" class="animate-fade-in">Reviews</a></li>
+                    <li><a href="#contact" class="animate-fade-in">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section animate-slide-up">
+                <h3>Contact Info</h3>
+                <p>Email: studio7d2p@gmail.com</p>
+                <p>Phone: +27 83 951 1252</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.957276398951!2d28.260417074414818!3d-26.263049977040385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9518488a9fdd81%3A0x9605bc28fbb4ecd4!2sStudio%207!5e0!3m2!1sen!2sza!4v1702132746720!5m2!1sen!2sza" width="400" height="300" style="border:0;" allowfullscreen="  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>Address: 35 Morkel Road, Sunward Park, Boksburg, South Africa</p>
+            </div>
+            <div class="footer-section animate-slide-up">
+                <h3>Follow Us</h3>
+                <p class="animate-fade-in">Facebook | Instagram | Twitter</p>
+            </div>
+        </div>
+        <p class="animate-fade-in">&copy; 2023 Studio 7 Dance Company. All Rights Reserved.</p>
+        <p class="animate-fade-in">Created by: Genezis media</p>
+    </footer>
+
+    <script src="ST.js"></script>
+</body>
+</html>
